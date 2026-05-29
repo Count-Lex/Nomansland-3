@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Secret Access</title>
+
+<style>
+body {
+    background: black;
+    color: lime;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    margin-top: 20px;
+    background: black;
+    color: lime;
+    border: 1px solid lime;
+}
+
+button {
+    padding: 10px;
+    margin-left: 10px;
+    background: lime;
+    border: none;
+    cursor: pointer;
+}
+
+p {
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>ENTER PASSWORD</h1>
+
+<input type="password" id="passwordBox">
+
+<button onclick="checkPassword()">
+ENTER
+</button>
+
+<p id="message"></p>
+
+</div>
+
+<script>
+function checkPassword() {
+
+    const password =
+    document.getElementById("passwordBox").value;
+
+    if(password === "midnight") {
+
+        window.location.href = "level2.html";
+
+    } else {
+
+        document.getElementById("message").innerText =
+        "WRONG PASSWORD";
+
+    }
+}
+</script>
+
+</body>
+</html>
